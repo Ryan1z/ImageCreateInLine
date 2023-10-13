@@ -20,9 +20,6 @@ def linebot():
     body = request.get_data(as_text=True)
     json_data = json.loads(body)
     print(json_data)
-
-    with open("response.txt", "w", encoding="utf-8") as f:
-        json.dump(json_data,f,indent=4)
         
     try:
         line_bot_api = LineBotApi(CHANNEL_ACCESS_TOKEN)
